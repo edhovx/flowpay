@@ -52,9 +52,9 @@ export function NetworkGuard({ children }: { children: React.ReactNode }) {
       <AlertCircle className="h-12 w-12 text-destructive" />
       <h2 className="text-xl font-semibold">Wrong Network</h2>
       <p className="max-w-sm text-sm text-muted-foreground">
-        FlowPay runs on Arc Testnet. Please switch your wallet to continue.
+        FlowPay runs on testnet. Please switch your wallet to continue.
       </p>
-      <Button onClick={addNetwork}>Add / Switch to Arc Testnet</Button>
+      <Button onClick={addNetwork}>Switch Network</Button>
     </div>
   );
 }

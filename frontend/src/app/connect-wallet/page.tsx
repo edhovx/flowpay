@@ -18,7 +18,7 @@ export default function ConnectWalletPage() {
         <div>
           <h1 className="text-2xl font-semibold tracking-tight">Connect Wallet</h1>
           <p className="mt-2 text-muted-foreground">
-            Connect your wallet to Arc Testnet to create, fund, and settle payments.
+            Connect your wallet to start creating, funding, and settling payments.
           </p>
         </div>
 
@@ -26,7 +26,7 @@ export default function ConnectWalletPage() {
           <CardHeader>
             <CardTitle>Get Started</CardTitle>
             <CardDescription>
-              You need USDC on Arc Testnet. If you do not have any, request it from the faucet.
+              You need testnet USDC to use FlowPay. Request it from the faucet if you don't have any.
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-3">
@@ -50,8 +50,8 @@ export default function ConnectWalletPage() {
         <div className="flex items-start gap-3 rounded-lg border border-dashed p-4 text-left text-sm text-muted-foreground">
           <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />
           <p>
-            FlowPay will automatically prompt you to add or switch to Arc Testnet if your wallet is
-            not on the correct network.
+            FlowPay will automatically prompt you to switch to the correct network if your wallet is
+            not connected to the testnet.
           </p>
         </div>
 

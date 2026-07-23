@@ -48,7 +48,7 @@ const features = [
   {
     icon: Link2,
     title: "Payment Links",
-    description: "Send a link and let anyone view, fund, or track a payment on ArcScan.",
+    description: "Send a link and let anyone view, fund, or track a payment.",
   },
   {
     icon: Globe,
@@ -88,12 +88,12 @@ export default function LandingPage() {
         <div className="mx-auto max-w-3xl fade-up">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card/50 px-4 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur">
             <span className="flex h-2 w-2 rounded-full bg-green-500 animate-pulse" />
-            Live on Arc Testnet
+            Live on Testnet
           </div>
           <h1 className="text-5xl font-bold tracking-tight md:text-7xl">
             Programmable USDC
             <br />
-            payments built on Arc
+            payments
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground">
             FlowPay solves trust automation and transparency in payments
@@ -249,7 +249,7 @@ export default function LandingPage() {
               © {new Date().getFullYear()} {APP_NAME}. All rights reserved.
             </span>
             <span className="text-xs text-muted-foreground">
-              Built on Arc™. Arc is a trademark of Circle Internet Group, Inc. and/or its affiliates.
+              FlowPay is built on Arc™. Arc is a trademark of Circle Internet Group, Inc. and/or its affiliates.
             </span>
           </div>
         </div>

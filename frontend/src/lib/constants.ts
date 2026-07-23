@@ -41,4 +41,4 @@ export const NAV_LINKS = [
 ];
 
 export const APP_NAME = "FlowPay";
-export const APP_TAGLINE = "Programmable payments on Arc";
+export const APP_TAGLINE = "Programmable USDC Payments";
