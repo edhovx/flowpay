@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" width="200" height="48">
+  <defs>
+    <linearGradient id="fp-brand-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <style>
+      .fp-text { fill: #6366f1; }
+      @media (prefers-color-scheme: dark) {
+        .fp-text { fill: #818cf8; }
+      }
+    </style>
+  </defs>
+  <rect x="0" y="4" width="40" height="40" rx="9" fill="url(#fp-brand-grad)"/>
+  <path d="M9 18 Q14 13 20 18 T34 18" stroke="#ffffff" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M9 28 Q14 23 20 28 T34 28" stroke="#ffffff" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.6"/>
+  <circle cx="34" cy="15" r="3.5" fill="#ffffff"/>
+  <text x="52" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="700" class="fp-text">FlowPay</text>
+</svg>

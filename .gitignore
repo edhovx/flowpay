@@ -1,0 +1,37 @@
+# Dependencies
+**/node_modules/
+.pnp
+.pnp.js
+
+# Next.js
+.next/
+out/
+dist/
+**/dist/
+
+# Build
+build/
+**/artifacts/
+**/cache/
+**/typechain-types/
+
+# Environment
+.env
+.env.local
+.env*.local
+**/.env.local
+
+# Testing
+coverage/
+test-results/
+playwright-report/
+
+# Misc
+.DS_Store
+*.pem
+.vscode/
+.idea/
+*.log
+cache/
+*.tsbuildinfo
+Thumbs.db
