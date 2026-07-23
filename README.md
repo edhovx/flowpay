@@ -4,7 +4,7 @@
 
 FlowPay is a decentralized payment platform on Arc Testnet that provides escrow-protected transactions, automatic multi-party splits, and onchain dispute resolution — all in one workflow.
 
-> **FlowPay is built on Arc™.** Arc is a trademark of Circle Internet Group, Inc.
+> **FlowPay is built on Arc™.** Arc is a trademark of Circle Internet Group, Inc. and/or its affiliates.
 > FlowPay is an independent product and is not affiliated with or endorsed by Circle.
 
 ## ✨ Features

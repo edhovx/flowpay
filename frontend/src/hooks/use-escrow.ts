@@ -1,6 +1,8 @@
 "use client";
 
+import React from "react";
 import { useAccount, useReadContract, useWriteContract, useWaitForTransactionReceipt } from "wagmi";
+import { useQueryClient } from "@tanstack/react-query";
 import { formatUnits, parseUnits, type Address } from "viem";
 import { ESCROW_CONTRACT_ADDRESS, USDC_CONTRACT_ADDRESS } from "@/lib/contracts";
 import escrowAbi from "@/lib/abi/FlowPayEscrow.json";
@@ -56,8 +58,16 @@ export function useUSDCBalance() {
 }
 
 export function useCreatePayment() {
-  const { writeContract, data: hash, isPending, error } = useWriteContract();
+  const { writeContract, data: hash, isPending, error, isSuccess: isWriteSuccess } = useWriteContract();
   const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash });
+  const queryClient = useQueryClient();
+
+  // Invalidate all queries when transaction is confirmed
+  React.useEffect(() => {
+    if (isSuccess) {
+      queryClient.invalidateQueries();
+    }
+  }, [isSuccess, queryClient]);
 
   const createPayment = (data: {
     title: string;

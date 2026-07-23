@@ -17,22 +17,19 @@ const siteUrl = "https://flowpay.example.com";
 
 export const metadata: Metadata = {
   title: {
-    default: "FlowPay — Programmable USDC Payments on Arc",
+    default: "FlowPay — Programmable USDC Payments",
     template: "%s | FlowPay",
   },
   description:
-    "FlowPay is a programmable USDC payment platform built on Arc. Create secure on-chain payments with escrow, split payments, invoices, and dispute resolution.",
+    "FlowPay is a programmable USDC payment platform. Create secure on-chain payments with escrow, split payments, invoices, and dispute resolution.",
   keywords: [
     "FlowPay",
     "USDC",
-    "Arc",
-    "Arc Testnet",
     "escrow",
     "split payment",
     "smart contract",
     "blockchain payments",
     "DeFi",
-    "built on Arc",
   ],
   authors: [{ name: "FlowPay" }],
   creator: "FlowPay",
@@ -42,7 +39,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteUrl,
     siteName: "FlowPay",
-    title: "FlowPay — Programmable USDC Payments on Arc",
+    title: "FlowPay — Programmable USDC Payments",
     description:
       "Create secure on-chain payments with escrow, split payments, invoices, and dispute resolution.",
     images: [
@@ -56,7 +53,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "FlowPay — Programmable USDC Payments on Arc",
+    title: "FlowPay — Programmable USDC Payments",
     description:
       "Create secure on-chain payments with escrow, split payments, invoices, and dispute resolution.",
     images: ["/og-image.svg"],

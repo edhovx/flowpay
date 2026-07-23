@@ -50,5 +50,4 @@ test.describe("Landing Page", () => {
     await page.goto("/");
     await expect(page.getByText(/All rights reserved/)).toBeVisible();
     await expect(page.getByText(/Circle Internet Group/)).toBeVisible();
-  });
-});
+  });});
