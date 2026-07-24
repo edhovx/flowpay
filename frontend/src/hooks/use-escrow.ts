@@ -58,7 +58,7 @@ export function useUSDCBalance() {
 }
 
 export function useCreatePayment() {
-  const { writeContract, data: hash, isPending, error, isSuccess: isWriteSuccess } = useWriteContract();
+  const { writeContractAsync, data: hash, isPending, error, isSuccess: isWriteSuccess } = useWriteContract();
   const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash });
   const queryClient = useQueryClient();
 
@@ -69,7 +69,7 @@ export function useCreatePayment() {
     }
   }, [isSuccess, queryClient]);
 
-  const createPayment = (data: {
+  const createPayment = async (data: {
     title: string;
     description: string;
     seller: Address;
@@ -84,7 +84,7 @@ export function useCreatePayment() {
     deliveryDeadline: number;
     autoReleaseTime: number;
   }) => {
-    writeContract({
+    return writeContractAsync({
       address: ESCROW_CONTRACT_ADDRESS,
       abi: escrowAbi as any,
       functionName: "createPayment",

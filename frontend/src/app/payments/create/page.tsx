@@ -72,10 +72,11 @@ export default function CreatePaymentPage() {
   React.useEffect(() => {
     if (error && txStatus === "pending") {
       setTxStatus("failed");
-      setTxError(error.message || "Transaction failed");
+      const errMsg = (error as any)?.shortMessage || (error as any)?.message || "Transaction failed";
+      setTxError(errMsg);
       toast({
         title: "❌ Transaction Failed",
-        description: error.message,
+        description: errMsg,
         variant: "destructive",
       });
     }
@@ -150,7 +151,7 @@ export default function CreatePaymentPage() {
     }
 
     try {
-      createPayment({
+      await createPayment({
         title: data.title,
         description: data.description || "",
         seller: data.seller as `0x${string}`,
@@ -167,10 +168,10 @@ export default function CreatePaymentPage() {
       });
     } catch (e: any) {
       setTxStatus("failed");
-      setTxError(e.message || "Transaction failed");
+      setTxError(e.message || e.shortMessage || "Transaction failed");
       toast({
         title: "❌ Transaction Failed",
-        description: e.message,
+        description: e.shortMessage || e.message || "Unknown error",
         variant: "destructive",
       });
     }

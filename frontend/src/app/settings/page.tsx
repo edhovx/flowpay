@@ -2,50 +2,47 @@
 
 import { AppShell } from "@/components/layout/app-shell";
 import { AddressDisplay } from "@/components/address-display";
-import { Info, Shield } from "lucide-react";
 
 export default function SettingsPage() {
   return (
     <AppShell>
-      <div className="space-y-6 p-6 lg:p-8">
+      <div className="space-y-12 p-8 lg:p-12">
         <div className="stagger-in">
-          <h1 className="text-2xl font-bold tracking-tight">Settings</h1>
-          <p className="text-sm text-muted-foreground">About FlowPay</p>
+          <p className="text-xs uppercase tracking-widest text-[#d8b15f]">Info</p>
+          <h1 className="mt-2 text-4xl font-medium tracking-tight">Settings</h1>
         </div>
 
         {/* Contracts */}
-        <div className="glass-card card-glow stagger-in rounded-2xl" style={{ animationDelay: "100ms" }}>
-          <div className="flex items-center gap-2 border-b border-border/40 p-5 pb-3">
-            <Shield className="h-4 w-4 text-muted-foreground" />
-            <h3 className="text-base font-semibold">Contracts</h3>
+        <div className="stagger-in" style={{ animationDelay: "100ms" }}>
+          <div className="border-b border-border pb-4">
+            <h2 className="text-lg font-medium">Contracts</h2>
           </div>
-          <div className="space-y-5 p-5">
-            <div className="space-y-1">
-              <p className="text-[11px] uppercase tracking-wider text-muted-foreground">Escrow Contract</p>
-              <AddressDisplay address="0x8155221aFF293f4a79e02116E1e47a5885f3294D" />
+          <div className="mt-6 grid gap-8 sm:grid-cols-2">
+            <div>
+              <p className="text-[10px] uppercase tracking-widest text-muted-foreground">Escrow</p>
+              <div className="mt-2"><AddressDisplay address="0x8155221aFF293f4a79e02116E1e47a5885f3294D" /></div>
             </div>
-            <div className="space-y-1">
-              <p className="text-[11px] uppercase tracking-wider text-muted-foreground">USDC Token</p>
-              <AddressDisplay address="0x3600000000000000000000000000000000000000" />
+            <div>
+              <p className="text-[10px] uppercase tracking-widest text-muted-foreground">USDC</p>
+              <div className="mt-2"><AddressDisplay address="0x3600000000000000000000000000000000000000" /></div>
             </div>
           </div>
         </div>
 
-        {/* About FlowPay */}
-        <div className="glass-card card-glow stagger-in rounded-2xl" style={{ animationDelay: "200ms" }}>
-          <div className="flex items-center gap-2 border-b border-border/40 p-5 pb-3">
-            <Info className="h-4 w-4 text-muted-foreground" />
-            <h3 className="text-base font-semibold">About</h3>
+        {/* About */}
+        <div className="stagger-in" style={{ animationDelay: "200ms" }}>
+          <div className="border-b border-border pb-4">
+            <h2 className="text-lg font-medium">About</h2>
           </div>
-          <div className="grid gap-5 p-5 sm:grid-cols-2">
-            <div className="space-y-1">
-              <p className="text-[11px] uppercase tracking-wider text-muted-foreground">Version</p>
-              <p className="text-sm font-semibold">1.0.0</p>
+          <div className="mt-6 grid gap-8 sm:grid-cols-2">
+            <div>
+              <p className="text-[10px] uppercase tracking-widest text-muted-foreground">Version</p>
+              <p className="mt-2 text-sm font-medium text-cream">1.0.0</p>
             </div>
-            <div className="space-y-1">
-              <p className="text-[11px] uppercase tracking-wider text-muted-foreground">Status</p>
-              <p className="flex items-center gap-1.5 text-sm font-semibold text-emerald-500">
-                <span className="flex h-1.5 w-1.5 rounded-full bg-emerald-500 pulse-dot" />
+            <div>
+              <p className="text-[10px] uppercase tracking-widest text-muted-foreground">Status</p>
+              <p className="mt-2 flex items-center gap-1.5 text-sm font-medium text-[#b7c8a3]">
+                <span className="flex h-1.5 w-1.5 rounded-full bg-[#b7c8a3] pulse-dot" />
                 Live
               </p>
             </div>
